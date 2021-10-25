@@ -5,8 +5,13 @@ navbar:
   left:
     - text: "Home"
       href: index.html
+    - text: 'Plotly result'
+      href: plotly.html
+    - text: 'altair result'
+      href: altair.html
     - text: "About"
       href: about.html
+      
 output:
   html_document:
       toc: True 

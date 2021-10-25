@@ -268,6 +268,12 @@ $(document).ready(function () {
   <a href="index.html">Home</a>
 </li>
 <li>
+  <a href="plotly.html">Plotly result</a>
+</li>
+<li>
+  <a href="altair.html">altair result</a>
+</li>
+<li>
   <a href="about.html">About</a>
 </li>
       </ul>
@@ -286,10 +292,34 @@ $(document).ready(function () {
 
 </div>
 
+<div id="TOC">
+<ul>
+<li><a href="#plotly">Plotly</a><ul>
+<li><a href="#questions-for-each-of-the-household-what-is-the-total-power-usage-from-all-phases-change-overtime">Questions: For each of the household, what is the total power usage from all phases change overtime?</a></li>
+</ul></li>
+<li><a href="#altair">Altair</a><ul>
+<li><a href="#questions-what-is-the-difference-between-the-common-appliance-fridge-and-entertainment-in-three-households-do-they-have-some-seasonal-regularity">Questions: What is the difference between the common appliance: fridge and entertainment in three households, do they have some seasonal regularity?</a></li>
+</ul></li>
+</ul>
+</div>
 
-<p>Hello, Website!</p>
-<p>For more information about simple R Markdown websites, please read the documentation at <a href="https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html" class="uri">https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html</a>.</p>
-<p>Please also note that simple R Markdown sites are <em>not</em> based on <strong>blogdown</strong>. They are probably good for websites with only a few Rmd documents. For larger-scale and more sophisticated websites (such as blogs), you may want to use <strong>blogdown</strong> instead: <a href="https://github.com/rstudio/blogdown" class="uri">https://github.com/rstudio/blogdown</a>.</p>
+<div id="plotly" class="section level2">
+<h2>Plotly</h2>
+<div id="questions-for-each-of-the-household-what-is-the-total-power-usage-from-all-phases-change-overtime" class="section level3">
+<h3>Questions: For each of the household, what is the total power usage from all phases change overtime?</h3>
+<p>The plot contains the powerallpohases of three households measured by smart meter, and the scale could be varied from minimum 1 hour to maximum 1 month period.</p>
+<p>Rationale: Using this plot, we could have a clear view of how the total power usage varies during different time and also we could compare with other two households in the same figure. And the user could switch from different time range.</p>
+<p>Alternatives: I have thought about using the histogram, but since there are too many bins for the time, also best time scale looking at the powerusage should be 1D. Therefore I decided to use the multiple line plot along with the time series range bar.</p>
+</div>
+</div>
+<div id="altair" class="section level2">
+<h2>Altair</h2>
+<div id="questions-what-is-the-difference-between-the-common-appliance-fridge-and-entertainment-in-three-households-do-they-have-some-seasonal-regularity" class="section level3">
+<h3>Questions: What is the difference between the common appliance: fridge and entertainment in three households, do they have some seasonal regularity?</h3>
+<p>The plot shows the relationship between Fridge and Entertainment’s power usage using the Bubble plots, the size of the Bubble indicates the total usage of the power and the color indicates the category of the household. The plot is showing monthly, when the user slide the bar it will move from January to Decemember</p>
+<p>Rationale: This plot directly shows the relationship among the usage of the two appliances. If the bubble is rightward but downward, it indicates that the usage of Fridge is higher, on the contrast is the entertainment. Also the size of the bubble could tell the user about the total usage. And the color of the bubble could easily see how different household’s usage. Also we want to see whether there exists a seasonaly trend, therefore I split the data into different month index. Alternatives: I tried the Scatter Plot and Histogram with Interval Selection. But if the x axis is the time. The problem is similar with the first question: two many intervals. And the labels will be stacked together, inorder to make the visualization clear and organized. I choose the multi line plot.</p>
+</div>
+</div>
 
 
 
